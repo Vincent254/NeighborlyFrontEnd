@@ -2,7 +2,7 @@ import logging.config
 import os
 from flask import Flask, Blueprint, request, jsonify, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
-
+import settings
 import requests
 import json
 from feedgen.feed import FeedGenerator
@@ -12,8 +12,6 @@ from urllib.parse import urljoin
 from feedwerk.atom import AtomFeed
 
 app = Flask(__name__)
-import settings
-
 Bootstrap(app)
 
 
